@@ -1,12 +1,16 @@
-
 body{
-    max-width: 960px;
+    max-width: 100%;
     padding-bottom: 20px;
     margin: 0 auto;
     font: 100%/1.5 'helvetica neue', 'Arial', sans-serif;
     letter-spacing: 0.05em;
     /*line-height: 1.40em;*/
     color: #404040;
+    background-color: #282828;
+}
+
+img{
+    max-width: 100%;
 }
 
 h1{
@@ -24,16 +28,79 @@ h3{
     text-transform: uppercase;
 }
 
+header{
+    background: #101010 url("../images/0036%20copy.jpg") no-repeat center center;
+    width: 100%;
+    margin: 0 auto;
+    height: 750px;
+}
+
+header div{
+    border: 5px solid;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    position: relative;
+    top: 200px;
+}
+
+
+
 header h1{
     text-align: center;
+    margin: 0 auto;
+    background:#282828;
+    opacity: 0.9;
+    color: #404040;
+}
+
+nav{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 250px;
+    overflow: auto;
+}
+
+header nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li{
+    float: left;
+    text-transform: uppercase;
+    font-size: 30px;
+    background:#282828;
+    opacity: 0.8;
+    text-align: center;
+    width: 90px;
+    margin: 10px 50px;
+    border: 5px solid #404040;
 }
 
 a:link{
     text-decoration: none;
+    color: #EF5847;
+}
+
+a:hover{
+    color: #fcf8e3;
+}
+
+a:visited{
+    color: #EF5847;
 }
 
 article{
     padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+article div{
+    margin-bottom: 100px;
 }
 
 article h2{
@@ -42,3 +109,6 @@ article h2{
     max-width: 470px;
     margin: 0 auto;
 }
+
+
+
