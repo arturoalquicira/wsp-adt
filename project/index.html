@@ -1,66 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <title>Indie Stage | Track your favorite artists and never miss a show again</title>
+    <title>At The Venue | Track your favorite artists and never miss a show again</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Indiestage allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
+    <meta name="Description" content="At The Venue allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-        <nav> <!-- Navbar -->
-            <h3>IndieStage</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Bands To Watch</a></li>
-                    <li><a href="#">Sign In | Sign Up</a></li>
-                </ul>
-        </nav> <!-- Ends Navbar -->
-    </header>
+<div class="container-fluid">
+    <header class="navbar-wrapper clearfix">
+        <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+        <div class="container span12">
 
-    <article>  <!-- Main Content -->
-        <h1>Never miss a show again</h1>
-        <h4>Discover new touring artists and start tracking your favorite ones</h4>
-        <form action="search-results.html" method="get"> <!-- Search Form -->
-            <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
-            <button id="search">Search</button>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">At The Venue</a>
+
+                    <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                    <div class="nav-collapse collapse text-center">
+                        <ul class="nav pull-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Bands To Watch</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Sign In</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!-- /.navbar-inner -->
+            </nav><!-- /.navbar -->
+        </div> <!-- /.container -->
+    </header><!-- /.navbar-wrapper -->
+
+    <article class="row-fluid">  <!-- Main Content -->
+        <h2 class="span12 text-center">Never miss a show again</h2>
+        <h4 class="span12 text-center">Start searching for artists, tour dates or concerts in your city.</h4>
+        <form class="form-search span12 text-center" action="search-results.html" method="get"> <!-- Search Form -->
+            <input class="" id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
+            <button class="btn">Search</button>
         </form> <!-- Ends Search Form -->
-        <h3>New tour dates comin up your town!</h3>
-        <div> <!-- Feature Section -->
+
+        <div class="row-fluid hidden-phone">
+            <h3 class="">Discover new touring artists and start tracking your favorite ones.</h3>
+            <strong>Search by location.</strong>
+            <strong>Add concerts to your calendar.</strong>
+            <strong>Follow your favorite artists and keep track of their tour dates.</strong>
+            <form class="">
+                <input id="email-signup" name="email" type="text" placeholder="E-mail" maxlength="30">
+                <input id="username-signup" name="username" type="text" placeholder="Username" maxlength="30">
+                <input id="password-signup" name="password" type="password" placeholder="Password" maxlength="30">
+                <input id="verify-signup" name="verify-password" type="password" placeholder="Verify Password" maxlength="30">
+                <button id="sign-up" type="button">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="hidden-phone"> <!-- Feature Section/ Hidden for mobile -->
+            <h3>New tour dates coming up your town!</h3>
             <div>
                 <a href="#"><h3>Washed Out</h3></a>
                 <span class="venue">The Social-</span>
                 <span class="city">Orlando,</span>
-                <span class="state">Fl,</span><br />
-                <a href="#"><img src="images/wasehd-out-live.jpg"></a>
+                <span class="state">Fl</span><br />
+                <a href="#"><img src="images/wasehd-out-live.jpg" class="img-responsive"></a>
             </div>
-            <div><a href="#"><h3>Foals</h3></a>
+            <div>
+                <a href="#"><h3>Foals</h3></a>
                 <span class="venue">Hard Rock-</span>
                 <span class="city">Tampa,</span>
-                <span class="state">Fl,</span><br />
-                <a href="#"><img src="images/foals-live.jpg"></a>
+                <span class="state">Fl</span><br />
+                <a href="#"><img src="images/foals-live.jpg" class="img-responsive"></a>
             </div>
             <div>
                 <a href="#"><h3>Sigur Ros</h3></a>
                 <span class="venue">CFE Arena-</span>
                 <span class="city">Orlando,</span>
-                <span class="state">Fl,</span><br />
-                <a href="#"><img src="images/sigur-ros-live.jpg"></a>
+                <span class="state">Fl</span><br />
+                <a href="#"><img src="images/sigur-ros-live.jpg" class="img-responsive"></a>
             </div>
         </div> <!-- Ends Feature Section -->
-        <h1>Sign up as an artist</h1>
-        <h4>Manage and update your tour dates in just a few steps</h4>
+
+
+        <div id="myCarousel" class="carousel slide hidden-desktop">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <a href="#"><img src="images/wasehd-out-live.jpg" class="img-responsive"></a>
+                    <div class="carousel-caption">
+                        <a href="#"><h4>Washed Out</h4></a>
+                        <p>
+                            <span class="venue">Hard Rock-</span>
+                            <span class="city">Tampa,</span>
+                            <span class="state">Fl</span><br />
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="images/foals-live.jpg" class="img-responsive"></a>
+                    <div class="carousel-caption">
+                        <a href="#"><h4>Foals</h4></a>
+                        <p>
+                            <span class="venue">The Social-</span>
+                            <span class="city">Orlando,</span>
+                            <span class="state">Fl</span><br />
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="images/sigur-ros-live.jpg" class="img-responsive"></a>
+                    <div class="carousel-caption">
+                        <a href="#"><h4>Sigur Ros</h4></a>
+                        <p>
+                            <span class="venue">CFE Arena-</span>
+                            <span class="city">Orlando,</span>
+                            <span class="state">Fl</span><br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
     </article> <!-- Ends Main Content -->
 
-    <footer>
+    <footer class="row-fluid text-center">
         <a href="#">About Us</a>
+        <span>|</span>
         <a href="#">Terms & Conditions</a>
+        <span>|</span>
+        <a href="#">Contact Us</a>
     </footer>
-
-    <script src="//code.jquery.com/jquery.js"></script>
+</div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

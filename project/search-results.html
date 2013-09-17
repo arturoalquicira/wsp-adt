@@ -2,112 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Indie Stage | Track your favorite artists and never miss a show again</title>
+    <title>At The Venue | Track your favorite artists and never miss a show again</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Indiestage allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
+    <meta name="Description" content="At The Venue allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-        <nav> <!-- Navbar -->
-            <h3>IndieStage</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Bands To Watch</a></li>
-                <li><a href="#">Sign In | Sign Up</a></li>
-            </ul>
-        </nav> <!-- Ends Navbar -->
-    </header>
-    <form> <!-- Search Form -->
-        <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
-        <button id="search">Search</button>
-    </form> <!-- Ends Search Form -->
-    <article>
-        <h3>In your area</h3>
-        <ul>
-            <li>
-                <a href="details-page.html">
-                    <span class="month">Oct</span>
-                    <span class="day">5</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">CFE Arena -</span>
-                <span class="city">Orlando,</span>
-                <span class="state">Fl</span>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="month">Oct</span>
-                    <span class="day">6</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">USF Sun Dome -</span>
-                <span class="city">Tampa,</span>
-                <span class="state">Fl</span>
-            </li>
-        </ul>
-        <h3>Upcoming events</h3>
-        <ul>
-            <li>
-                <a href="#">
-                    <span class="month">Nov</span>
-                    <span class="day">5</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">Wembley Arena -</span>
-                <span class="city">London,</span>
-                <span class="state">UK</span>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="month">Nov</span>
-                    <span class="day">16</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">The O2 -</span>
-                <span class="city">Dublin,</span>
-                <span class="state">Ireland</span>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="month">Nov</span>
-                    <span class="day">18</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">Brighton Centre -</span>
-                <span class="city">Brighton,</span>
-                <span class="state">UK</span>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="month">Nov</span>
-                    <span class="day">26</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">Usher Hall -</span>
-                <span class="city">Edinburgh,</span>
-                <span class="state">UK</span>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="month">Nov</span>
-                    <span class="day">27</span>
-                    <strong>Sigur Ros</strong>
-                </a>
-                <span class="venue">Oslo Spektrum -</span>
-                <span class="city">Oslo,</span>
-                <span class="state">Norway</span>
-            </li>
-        </ul>
-    </article>
+<div class="container-fluid">
+    <header class="navbar-wrapper clearfix">
+        <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+        <div class="container span12">
 
-    <footer>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="index.html">At The Venue</a>
+
+                    <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                    <div class="nav-collapse collapse text-center">
+                        <ul class="nav pull-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="#">Bands To Watch</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Sign In</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!-- /.navbar-inner -->
+            </nav><!-- /.navbar -->
+        </div> <!-- /.container -->
+    </header><!-- /.navbar-wrapper -->
+
+    <form class="form-search span12 text-center" action="search-results.html" method="get"> <!-- Search Form -->
+        <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
+        <button class="btn">Search</button>
+    </form> <!-- Ends Search Form -->
+
+    <div><h3>Advance Search</h3>
+        <form class="form-search span12">
+            <input id="change-location" class="" name="location" type="text" placeholder="Change location" maxlength="30">
+            <div class="btn-group">
+                <button class="btn">Venue</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <!-- dropdown menu links -->
+                    <li><a href="#">House Of Blues</a></li>
+                    <li><a href="#">Will's Pub</a></li>
+                    <li><a href="#">Amway Center</a></li>
+                    <li><a href="#">Hard Rock Cafe</a></li>
+                    <li><a href="#">Hard Rock Cafe</a></li>
+                    <li><a href="#">The Social</a></li>
+                    <li><a href="#">The Beacham</a></li>
+                </ul>
+            </div>
+            <input id="date-picker" name="date-picker" type="text" placeholder="mm/dd/yy">
+            <button class="btn">Search</button>
+        </form>
+    </div>
+
+        <article class="row-fluid">
+            <p class="span12">Search results for "sigur ros" near Orlando, Fl.</p>
+            <p class="span12">We found 68 <a>venues</a> and 174 upcoming <a>events</a>.</p>
+            <h3 class="span12">In Your Area</h3>
+            <ul>
+                <li>
+                    <a href="details-page.html">
+                        <div>
+                            <span class="month">Oct</span><br />
+                            <span class="day">5</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">CFE Arena -</span>
+                    <span class="city">Orlando,</span>
+                    <span class="state">Fl</span>
+                    <a href="details-page.html"><i class="icon-chevron-right"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="even">
+                        <span class="month">Oct</span><br />
+                        <span class="day">6</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">USF Sun Dome -</span>
+                    <span class="city">Tampa,</span>
+                    <span class="state">Fl</span>
+                </li>
+            </ul>
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div>
+                        <span class="month">Nov</span><br />
+                        <span class="day">5</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">Wembley Arena -</span>
+                    <span class="city">London,</span>
+                    <span class="state">UK</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="even">
+                        <span class="month">Nov</span><br />
+                        <span class="day">16</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">The O2 -</span>
+                    <span class="city">Dublin,</span>
+                    <span class="state">Ireland</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                        <span class="month">Nov</span><br />
+                        <span class="day">18</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">Brighton Centre -</span>
+                    <span class="city">Brighton,</span>
+                    <span class="state">UK</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="even">
+                        <span class="month">Nov</span><br />
+                        <span class="day">26</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">Usher Hall -</span>
+                    <span class="city">Edinburgh,</span>
+                    <span class="state">UK</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <div>
+                        <span class="month">Nov</span><br />
+                        <span class="day">27</span>
+                        </div>
+                        <strong>Sigur Ros</strong>
+                    </a><br />
+                    <span class="venue">Oslo Spektrum -</span>
+                    <span class="city">Oslo,</span>
+                    <span class="state">Norway</span>
+                </li>
+            </ul>
+
+        </article>
+
+    <footer class="row-fluid text-center">
         <a href="#">About Us</a>
+        <span>|</span>
         <a href="#">Terms & Conditions</a>
+        <span>|</span>
+        <a href="#">Contact Us</a>
     </footer>
-    <script src="//code.jquery.com/jquery.js"></script>
+</div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

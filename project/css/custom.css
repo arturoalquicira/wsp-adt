@@ -1,0 +1,37 @@
+article ul{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+article ul li{
+    border: 1px solid;
+    margin-bottom: 2px;
+}
+
+article ul li div{
+    float: left;
+    width: 50px;
+    background: #808080;
+    text-align: center;
+    color: #fff;
+    margin-right: 10px;
+}
+
+article ul li div.even{
+    background: #000;
+}
+
+article ul li div .month{
+    border-bottom: 1px solid #fff;
+    width: 50px;
+}
+
+#change-location{
+    width: 110px;
+}
+
+#date-picker{
+    width: 70px;
+}
+
