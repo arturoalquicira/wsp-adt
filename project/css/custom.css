@@ -56,6 +56,17 @@ article ul li div .month{
     margin-left: 30px;
 }
 
+#my-calendar, #buy-tickets, #maps{
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.social{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
     body{

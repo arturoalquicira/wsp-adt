@@ -44,9 +44,11 @@
     <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
     <button class="btn">Search</button>
 </form> <!-- Ends Search Form -->
+
     <article>
         <a href="#"><h3>Sigur Ros</h3></a>
         <a href="#"><h4>CFE Arena - Orlando, Fl</h4></a>
+        <a href="#"><h5>Thursday 5 October 2013</h5></a>
         <!-- Carousel-->
         <div id="myCarousel" class="carousel slide">
             <ol class="carousel-indicators">
@@ -103,10 +105,11 @@
                 </a>
             </li>
         </ul>
-        <strong>Line Up</strong>
-        <a href="#">Sigur Ros</a>
-        <a href="#">Julianna Barwick</a>
-        <strong>Venue</strong>
+        <strong>Line Up</strong><br />
+        <a href="#">Sigur Ros</a><br />
+        <a href="#">Julianna Barwick</a><br />
+
+        <strong>Venue</strong><br />
         <p>CFE Arena 400 Central Blvd, 32816, Orlando, Fl, US</p>
         <p>(407) 934-2583</p>
         <a href="#">www.ucfarena.com</a><br />
@@ -117,12 +120,21 @@
         <p>Private Lot</p>
         <p>Price Range:</p>
         <p>$$</p>
-        <button class="btn"><i class="icon-plus"></i> My Calendar</button>
+        <button id="my-calendar" class="btn btn-inverse"><i class="icon-plus icon-white"></i> Add To My Calendar</button><br />
 
-        <a href="#">Buy Tickets</a><br />
-        <button>Share On Facebook</button><br />
-        <button>Share On Twitter</button><br />
-        <button>E-mail To A Friend</button><br />
+        <button id="buy-tickets" type="button" class="btn" data-toggle="collapse" data-target="#tickets-demo">
+            Buy Tickets
+        </button>
+
+        <div id="tickets-demo" class="collapse in"> … </div>
+        <button id="maps" type="button" class="btn" data-toggle="collapse" data-target="#maps-demo">
+            Maps
+        </button>
+
+        <div id="maps-demo" class="collapse"><img src="images/Screen%20Shot%202013-09-18%20at%208.19.24%20AM.png"></div>
+        <button class="btn social">Share On Facebook</button><br />
+        <button class="btn social">Share On Twitter</button><br />
+        <button class="btn social">E-mail To A Friend</button><br />
     </article>
 
     <footer>
