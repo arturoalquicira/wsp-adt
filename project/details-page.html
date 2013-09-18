@@ -4,27 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>At The Venue | Track your favorite artists and never miss a show again</title>
-    <meta name="Description" content="Indiestage allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
+    <meta name="Description" content="At The Venue allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav> <!-- Navbar -->
-            <a href="index.html"><h1>At The Venue</h1></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Bands To Watch</a></li>
-                <li><a href="#">Sign In</a></li>
-                <li><span>|</span></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-        </nav> <!-- Ends Navbar -->
-    </header>
-    <form> <!-- Search Form -->
-        <input id="search-input" name="search" type="text" placeholder="Look for artists, venues or location..." maxlength="30">
-        <button id="search">Search</button>
-    </form> <!-- Ends Search Form -->
+<div class="container-fluid">
+<header class="navbar-wrapper span12 clearfix">
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container span12">
+
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="index.html">At The Venue</a>
+
+                <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                <div class="nav-collapse collapse text-center">
+                    <ul class="nav pull-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">Bands To Watch</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!-- /.navbar-inner -->
+        </nav><!-- /.navbar -->
+    </div> <!-- /.container -->
+</header><!-- /.navbar-wrapper -->
+
+<form class="form-search span12 text-center" action="search-results.html" method="get"> <!-- Search Form -->
+    <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
+    <button class="btn">Search</button>
+</form> <!-- Ends Search Form -->
     <article>
         <a href="#"><h2>Sigur Ros</h2></a>
         <a href="#"><h4>CFE Arena - Orlando, Fl</h4></a>
@@ -66,9 +85,11 @@
         <span>|</span>
         <a href="#">Contact Us</a>
     </footer>
-
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
 
