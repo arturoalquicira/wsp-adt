@@ -5,6 +5,7 @@
     <title>At The Venue | Track your favorite artists and never miss a show again</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="At The Venue allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
@@ -45,9 +46,9 @@
         <button class="btn">Search</button>
     </form> <!-- Ends Search Form -->
 
-    <div class="btn-toolbar row-fluid">
+    <div class="btn-toolbar row-fluid text-center">
         <div class="btn-group">
-            <a class="btn disabled" href="#"><i class="icon-filter"></i>Advance</a>
+            <a class="btn disabled" href="#"><i class="icon-filter"></i></a>
             <a class="btn" href="#"><i class="icon-map-marker"></i></a>
             <select id="dropdown-menu">
                 <!-- dropdown menu links -->
@@ -60,7 +61,7 @@
                 <option value="beacham">The Beacham</option>
             </select>
             <a class="btn" href="#"><i class="icon-calendar"></i></a>
-            <button class="btn">Search</button>
+            <button class="btn"><i class="icon-search"></i></button>
 
         </div>
     </div>
@@ -69,7 +70,6 @@
         <form class="form-search">
             <input id="change-location" class="" name="location" type="text" placeholder="Change location" maxlength="30">
             <input id="date-picker" name="date-picker" type="text" placeholder="mm/dd/yy"><br />
-            <button class="btn">Search</button>
         </form>
     </div>
 
