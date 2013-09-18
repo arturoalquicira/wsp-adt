@@ -45,18 +45,63 @@
     <button class="btn">Search</button>
 </form> <!-- Ends Search Form -->
     <article>
-        <a href="#"><h2>Sigur Ros</h2></a>
+        <a href="#"><h3>Sigur Ros</h3></a>
         <a href="#"><h4>CFE Arena - Orlando, Fl</h4></a>
-        <button>Add to Calendar</button>
-        <img src="images/sigur-ros-event.jpg" class="img-responsive">
-        <ul>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
-            <li><img src="http://placehold.it/140x100"></li>
+        <!-- Carousel-->
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="images/sigur-ros-event.jpg" class="">
+                </div>
+                <div class="item">
+                    <img src="images/sigur-ros-event01.jpg" class="">
+                </div>
+                <div class="item">
+                    <img src="images/sigur-ros-event02.jpg" class="">
+                </div>
+                <div class="item">
+                    <img src="images/sigur-ros-event03.jpg" class="">
+                </div>
+                <div class="item">
+                    <img src="images/sigur-ros-event04.jpg" class="">
+                </div>
+
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+
+        <ul class="thumbnails hidden-phone">
+            <li class="span2">
+                <a href="#" class="thumbnail">
+                    <img src="images/sigur-ros-event01.jpg" alt="">
+                </a>
+            </li>
+            <li class="span2">
+                <a href="#" class="thumbnail">
+                    <img src="images/sigur-ros-event02.jpg" alt="">
+                </a>
+            </li>
+            <li class="span2">
+                <a href="#" class="thumbnail">
+                    <img src="images/sigur-ros-event03.jpg" alt="">
+                </a>
+            </li>
+            <li class="span2">
+                <a href="#" class="thumbnail">
+                    <img src="images/sigur-ros-event04.jpg" alt="">
+                </a>
+            </li>
         </ul>
         <strong>Line Up</strong>
         <a href="#">Sigur Ros</a>
@@ -72,6 +117,8 @@
         <p>Private Lot</p>
         <p>Price Range:</p>
         <p>$$</p>
+        <button class="btn"><i class="icon-plus"></i> My Calendar</button>
+
         <a href="#">Buy Tickets</a><br />
         <button>Share On Facebook</button><br />
         <button>Share On Twitter</button><br />

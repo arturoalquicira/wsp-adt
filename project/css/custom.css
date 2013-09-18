@@ -48,3 +48,8 @@ article ul li div .month{
     margin-bottom: 0;
 }
 
+/* Desktop */
+@media (min-width: 768px) {
+    body{
+    }
+}
