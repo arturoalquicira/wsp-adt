@@ -7,6 +7,7 @@ article ul{
 article ul li{
     border: 1px solid;
     margin-bottom: 2px;
+    position: relative;
 }
 
 article ul li div{
@@ -34,5 +35,16 @@ article ul li div .month{
 
 #search-input{
     width: 170px;
+}
+
+.arrow{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+.location{
+    font-size: 12px;
+    margin-bottom: 0;
 }
 
