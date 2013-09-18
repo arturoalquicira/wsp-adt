@@ -27,11 +27,9 @@ article ul li div .month{
     width: 50px;
 }
 
-#change-location{
-    width: 110px;
+#dropdown-menu{
+    width: 100px;
+    margin-top: 10px;
 }
 
-#date-picker{
-    width: 70px;
-}
 
