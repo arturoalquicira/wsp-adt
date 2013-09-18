@@ -48,6 +48,10 @@ article ul li div .month{
     margin-bottom: 0;
 }
 
+.carousel-control{
+    top:50%;
+}
+
 /* Desktop */
 @media (min-width: 768px) {
     body{
