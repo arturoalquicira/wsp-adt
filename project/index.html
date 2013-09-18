@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <header class="navbar-wrapper clearfix">
+    <header class="row-fluid navbar-wrapper clearfix">
         <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
         <div class="container span12">
 
@@ -42,52 +42,65 @@
     </header><!-- /.navbar-wrapper -->
 
     <article class="row-fluid">  <!-- Main Content -->
+        <div id="home-search" class="row-fluid">
         <h2 class="span12 text-center">Never miss a show again</h2>
         <h4 class="span12 text-center">Start searching for artists, tour dates or concerts in your city.</h4>
         <form class="form-search span12 text-center" action="search-results.html" method="get"> <!-- Search Form -->
             <input class="" id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
             <button class="btn">Search</button>
         </form> <!-- Ends Search Form -->
-
-        <div class="row-fluid hidden-phone">
-            <h3 class="">Discover new touring artists and start tracking your favorite ones.</h3>
-            <strong>Search by location.</strong>
-            <strong>Add concerts to your calendar.</strong>
-            <strong>Follow your favorite artists and keep track of their tour dates.</strong>
-            <form class="">
-                <input id="email-signup" name="email" type="text" placeholder="E-mail" maxlength="30">
-                <input id="username-signup" name="username" type="text" placeholder="Username" maxlength="30">
-                <input id="password-signup" name="password" type="password" placeholder="Password" maxlength="30">
-                <input id="verify-signup" name="verify-password" type="password" placeholder="Verify Password" maxlength="30">
-                <button id="sign-up" type="button">Sign Up</button>
-            </form>
         </div>
+        <div id="cta" class="row-fluid hidden-phone">
+            <div class="span6 offset1">
+            <h2 class="">Discover new touring artists and start tracking your favorite ones.</h2>
+            <h4>Search by location.</h4><br />
+            <h4>Add concerts to your calendar.</h4><br />
+            <h4>Follow your favorite artists and keep track of their tour dates.</h4><br />
+            </div>
+            <div class="span4 ">
+            <form id="cta-form">
+                <input id="email-signup" name="email" type="text" placeholder="E-mail" maxlength="30"><br />
+                <input id="username-signup" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                <input id="password-signup" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                <input id="verify-signup" name="verify-password" type="password" placeholder="Verify Password" maxlength="30"><br />
+                <button id="sign-up" class="btn btn-primary btn-large" type="button">Sign Up</button>
+            </form>
+            </div>
+        </div>
+        <h3>New tour dates coming up your town!</h3>
 
-        <div class="hidden-phone"> <!-- Feature Section/ Hidden for mobile -->
-            <h3>New tour dates coming up your town!</h3>
-            <div>
-                <a href="#"><h3>Washed Out</h3></a>
-                <span class="venue">The Social-</span>
-                <span class="city">Orlando,</span>
-                <span class="state">Fl</span><br />
-                <a href="#"><img src="images/wasehd-out-live.jpg" class="img-responsive"></a>
+        <div class="hidden-phone row-fluid"> <!-- Feature Section/ Hidden for mobile -->
+            <div class="span4 feature">
+
+                <a href="#"><img src="images/wasehd-out-live.jpg"></a>
+                <div class="caption-custom">
+                    <a href="#"><h3>Washed Out</h3></a>
+                    <span class="venue">The Social-</span>
+                    <span class="city">Orlando,</span>
+                    <span class="state">Fl</span><br />
+                </div>
             </div>
-            <div>
-                <a href="#"><h3>Foals</h3></a>
-                <span class="venue">Hard Rock-</span>
-                <span class="city">Tampa,</span>
-                <span class="state">Fl</span><br />
-                <a href="#"><img src="images/foals-live.jpg" class="img-responsive"></a>
+            <div class="span4 feature">
+
+                <a href="#"><img src="images/foals-live.jpg"></a>
+                <div class="caption-custom">
+                    <a href="#"><h3>Foals</h3></a>
+                    <span class="venue">Hard Rock-</span>
+                    <span class="city">Tampa,</span>
+                    <span class="state">Fl</span><br />
+                </div>
             </div>
-            <div>
-                <a href="#"><h3>Sigur Ros</h3></a>
-                <span class="venue">CFE Arena-</span>
-                <span class="city">Orlando,</span>
-                <span class="state">Fl</span><br />
-                <a href="#"><img src="images/sigur-ros-live.jpg" class="img-responsive"></a>
+            <div class="span4 feature">
+
+                <a href="#"><img src="images/sigur-ros-live.jpg"></a>
+                <div class="caption-custom">
+                    <a href="#"><h3>Sigur Ros</h3></a>
+                    <span class="venue">CFE Arena-</span>
+                    <span class="city">Orlando,</span>
+                    <span class="state">Fl</span><br />
+                </div>
             </div>
         </div> <!-- Ends Feature Section -->
-
 
         <div id="myCarousel" class="carousel slide hidden-desktop">
             <ol class="carousel-indicators">
