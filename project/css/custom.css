@@ -72,12 +72,15 @@ article ul li div .month{
     padding: 4px;
 }
 
+ul.thumbnails li:nth-child(3n+1){
+    margin-left: 0;
+}
 
 
 /* Desktop */
 @media (min-width: 768px) {
     #home-search{
-        background: #101010 url("../images/home-page.jpg") no-repeat center center;
+        background: #101010 url("../images/img-frame") no-repeat center center;
         height: 600px;
     }
 
@@ -124,6 +127,8 @@ article ul li div .month{
         width: 20%;
     }
 
-
+    /*.carousel{*/
+        /*max-width: 600px;*/
+    /*}*/
 
 }
