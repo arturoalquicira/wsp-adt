@@ -32,8 +32,8 @@
                         <ul class="nav pull-right">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Bands To Watch</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Sign In</a></li>
+                            <!-- Button to trigger modal -->
+                            <a href="#myModal" role="button" class="btn" data-toggle="modal">Sign In</a>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!-- /.navbar-inner -->
@@ -157,6 +157,31 @@
         <span>|</span>
         <a href="#">Contact Us</a>
     </footer>
+
+
+    <!-- Button to trigger modal -->
+    <a href="#myModal" role="button" class="btn" data-toggle="modal">Sign In</a>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Sign In</h3>
+        </div>
+        <div class="modal-body">
+            <form>
+                <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                <label class="checkbox">
+                    <input type="checkbox"> Remember Me
+                </label>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-inverse">Sign In</button>
+        </div>
+    </div>
 </div>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
