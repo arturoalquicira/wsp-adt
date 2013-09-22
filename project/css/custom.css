@@ -76,6 +76,9 @@ ul.thumbnails li:nth-child(3n+1){
     margin-left: 0;
 }
 
+.thumbnails li{
+    margin-bottom: 8px;
+}
 
 /* Desktop */
 @media (min-width: 768px) {
@@ -124,11 +127,8 @@ ul.thumbnails li:nth-child(3n+1){
     }
 
     #my-calendar-desktop{
-        width: 20%;
+        width: 15%;
+        margin-bottom: 20px;
     }
-
-    /*.carousel{*/
-        /*max-width: 600px;*/
-    /*}*/
 
 }
