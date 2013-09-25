@@ -8,16 +8,18 @@
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 
 </head>
-<body>
+<body id="search-results-page">
 <div class="container-fluid">
     <header class="row-fluid navbar-wrapper clearfix">
         <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
         <div class="container span12">
 
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar">
                 <div class="navbar-inner">
                     <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -25,15 +27,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="index.html">At The Venue</a>
+                    <a class="brand" href="index.html"><img src="images/logo-01.png"></a>
 
                     <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                     <div class="nav-collapse collapse text-center">
-                        <ul class="nav pull-right">
-                            <li class="active"><a href="#">Home</a></li>
+                        <ul id="nav-links" class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
                             <li><a href="#">Bands To Watch</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Sign In</a></li>
+
+                        </ul>
+                        <ul class="nav pull-right">
+                            <!-- Button to trigger modal -->
+                            <li><a href="#myModal" data-toggle="modal">Sign In | Sign Up</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!-- /.navbar-inner -->
@@ -43,10 +48,10 @@
 
     <div class="row-fluid">
         <ul class="breadcrumb span5 hidden-phone">
-            <li><a href="#">Home</a> <span class="divider">/</span></li>
+            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
             <li class="active">Search Results</li>
         </ul>
-        <form id="search-results" class=" form-search text-right span7" action="search-results.html" method="get"> <!-- Search Form -->
+        <form id="search-results" class=" form-search span3" action="search-results.html" method="get"> <!-- Search Form -->
         <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
         <button class="btn">Search</button>
     </form> <!-- Ends Search Form --></div>
@@ -81,7 +86,7 @@
             <p class="">Search results for "sigur ros" near Orlando, Fl.</p>
             <p class="">We found 68 <a href="#">venues</a> and 174 upcoming <a href="#">events</a>.</p>
             <div class="row-fluid">
-                <div class="span5">
+                <div class="span5 offset1">
                     <h3 class="">In Your Area</h3>
                     <ul class="clickables">
                         <li>
@@ -178,7 +183,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="span2  hidden-phone">
+                <div class="span3  hidden-phone">
                     <h3>Advance Search</h3>
                     <form>
                       <strong>Change Location:</strong><br />
@@ -209,6 +214,26 @@
         <span>|</span>
         <a href="#">Contact Us</a>
     </footer>
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h2 id="myModalLabel">Sign In</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+                <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                <label class="checkbox">
+                    <input type="checkbox"> Remember Me
+                </label>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-inverse">Sign In</button>
+        </div>
+    </div>
 </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>

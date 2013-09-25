@@ -1,3 +1,73 @@
+@font-face {
+    font-family: talldark;
+    src: url(../fonts/tall_dark_and_hands/talldark.ttf);
+}
+
+body{
+    background-color: #2F3440;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1.00em;
+}
+
+h1{
+    font-family: 'talldark', sans-serif;
+    font-size: 7.143em;
+    color: #FFFEF5;
+    font-weight: normal;
+}
+
+h3{
+    font-family: 'source sans pro', sans-serif;
+    font-size: 1.429em;
+    font-weight: 300;
+    color: #FFFEF5;
+}
+
+h2{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 2.143em;
+    font-weight: 700;
+    color: #3EE3A6;
+    text-transform: uppercase;
+}
+
+.navbar-inner {
+    min-height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-image: none;
+    background-color: #303030;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar .nav>li>a, .caption-custom h3 {
+    float: none;
+    padding: 10px 15px 10px;
+    color: #F03E4F;
+    text-decoration: none;
+    text-shadow: none;
+    margin-top: 50px;
+}
+
+.navbar .nav>li>a:hover, .caption-custom h3:hover {
+    color: #FFFEF5;
+}
+
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+    color: #FFFEF5;
+    text-decoration: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#nav-links {
+    margin-left: 28%;
+}
+
 article ul{
     list-style-type: none;
     padding: 0;
@@ -17,6 +87,13 @@ article ul li div{
     text-align: center;
     color: #fff;
     margin-right: 10px;
+}
+
+.btn-custom{
+    background-color: #3EE3A6;
+    border: none;
+    width: 40px;
+    height: 30px;
 }
 
 article ul li div.even{
@@ -85,29 +162,47 @@ ul.thumbnails li:nth-child(3n+1){
     height: 360px;
 }
 
+#search-results-page article{
+    background-color: #FFFEF5;
+}
+
+footer{
+    
+}
+
 /* Desktop */
 @media (min-width: 768px) {
     #home-search{
-        background: #101010 url("../images/img-frame") no-repeat center center;
-        height: 600px;
+        background: #101010 url("../images/home-page.jpg") no-repeat 50% 10%;
+        height: 700px;
     }
 
-    #home-search h2{
-        margin-top: 200px;
+    #home-search h1{
+        margin-top: 150px;
     }
 
-    #home-search h2, #home-search h4, #home-search form{
-        color: #fff;
+    #home-search h3{
+        margin-bottom: 150px;
+
     }
 
     #cta{
         margin-top: 50px;
-        background: #101010;
-        color: #404040;
+        background-color: #FFFEF5;
+        color: #2F3440;
     }
 
+    #cta .span5{
+    }
+
+    #cta h3{
+        color: #2F3440;
+        font-weight: 700;
+    }
+
+
     #cta-form{
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     #cta-form input{
@@ -124,7 +219,7 @@ ul.thumbnails li:nth-child(3n+1){
     }
 
     .caption-custom{
-        background: #404040;
+        background: rgba(47,52,63,0.8);
         position: absolute;
         width: 100%;
         bottom: 0;
