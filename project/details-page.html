@@ -10,13 +10,13 @@
     <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body id="detail-page">
     <div class="container-fluid">
-        <header class="row-fluid navbar-wrapper clearfix">
+    <header class="row-fluid navbar-wrapper clearfix">
         <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
         <div class="container span12">
 
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar">
                 <div class="navbar-inner">
                     <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -24,15 +24,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="index.html">At The Venue</a>
+                    <a class="brand" href="index.html"><img src="images/logo-01.png"></a>
 
                     <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                     <div class="nav-collapse collapse text-center">
-                        <ul class="nav pull-right">
-                            <li class="active"><a href="#">Home</a></li>
+                        <ul id="nav-links" class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
                             <li><a href="#">Bands To Watch</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Sign In</a></li>
+
+                        </ul>
+                        <ul class="nav pull-right">
+                            <!-- Button to trigger modal -->
+                            <li><a href="#myModal" data-toggle="modal">Sign In | Sign Up</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!-- /.navbar-inner -->
@@ -41,109 +44,109 @@
     </header><!-- /.navbar-wrapper -->
 
         <div class="row-fluid">
-        <ul class="breadcrumb span6">
-            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-            <li><a href="search-results.html">Search Results</a> <span class="divider">/</span></li>
-            <li class="active">Event Info</li>
-        </ul>
-        <form id="search-results" class=" form-search text-right span6" action="search-results.html" method="get"> <!-- Search Form -->
-        <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
-        <button class="btn">Search</button>
-    </form> <!-- Ends Search Form --></div>
+            <ul class="breadcrumb span6">
+                <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                <li><a href="search-results.html">Search Results</a> <span class="divider">/</span></li>
+                <li class="active">Event Info</li>
+            </ul>
+            <form id="search-results" class=" form-search text-right span6" action="search-results.html" method="get"> <!-- Search Form -->
+                <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
+                <button class="btn">Search</button>
+            </form> <!-- Ends Search Form --></div>
 
         <article class="row-fluid">
-        <!-- Title-->
-        <div class="row-fluid">
-            <a href="#"><h3>Sigur Ros</h3></a>
-            <a href="#"><h4>CFE Arena - Orlando, Fl</h4></a>
-            <a href="#"><h5>Thursday 5 October 2013</h5></a>
-            <button id="my-calendar-desktop" class="btn btn-inverse hidden-phone"><i class="icon-plus icon-white"></i> Add To My Calendar</button><br />
-        </div>
-        <!-- Carousel-->
-        <div class="row-fluid">
-            <div class="span6">
-                <div id="myCarousel" class="carousel slide">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                    </ol>
-            <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="images/img-frame2.jpg" class="">
+            <!-- Title-->
+            <div class="row-fluid">
+                <a href="#"><h3>Sigur Ros</h3></a>
+                <a href="#"><h4>CFE Arena - Orlando, Fl</h4></a>
+                <a href="#"><h5>Thursday 5 October 2013</h5></a>
+                <button id="my-calendar-desktop" class="btn btn-inverse hidden-phone"><i class="icon-plus icon-white"></i> Add To My Calendar</button><br />
+            </div>
+            <!-- Carousel-->
+            <div class="row-fluid">
+                <div class="span6">
+                    <div id="myCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+                         <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <img src="images/img-frame2.jpg" class="">
+                            </div>
+                            <div class="item">
+                                <img src="images/img-frame2.jpg" class="">
+                            </div>
+                            <div class="item">
+                                <img src="images/img-frame2.jpg" class="">
+                            </div>
+                            <div class="item">
+                                <img src="images/img-frame2.jpg" class="">
+                            </div>
+                            <div class="item">
+                                <img src="images/img-frame2.jpg" class="">
+                            </div>
                         </div>
-                        <div class="item">
-                            <img src="images/img-frame2.jpg" class="">
-                        </div>
-                        <div class="item">
-                            <img src="images/img-frame2.jpg" class="">
-                        </div>
-                        <div class="item">
-                            <img src="images/img-frame2.jpg" class="">
-                        </div>
-                        <div class="item">
-                            <img src="images/img-frame2.jpg" class="">
-                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
                     </div>
-            <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div>
+
+                <div class="span6">
+                    <ul class="thumbnails hidden-phone">
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/img-frame2.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-           <div class="span6">
-                <ul class="thumbnails hidden-phone">
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span4">
-                        <a href="#" class="thumbnail">
-                            <img src="images/img-frame2.jpg" alt="">
-                        </a>
-                    </li>
-                </ul>
-           </div>
-        </div>
         <!-- Info & Map-->
         <div class="row-fluid">
            <div class="span6">
@@ -221,13 +224,35 @@
         </div>
     </article>
 
-        <footer class="row-fluid text-center">
-        <a href="#">About Us</a>
-        <span>|</span>
-        <a href="#">Terms & Conditions</a>
-        <span>|</span>
-        <a href="#">Contact Us</a>
-    </footer>
+        <footer class="row-fluid">
+            <div class="">
+                <ul class="">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 id="myModalLabel">Sign In</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                    <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                    <label class="checkbox">
+                        <input type="checkbox"> Remember Me
+                    </label>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-inverse">Sign In</button>
+            </div>
+        </div>
     </div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
