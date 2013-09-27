@@ -12,7 +12,7 @@
     <link href="css/custom.css" type="text/css" rel="stylesheet">
 
 </head>
-<body>
+<body id="home">
 <div class="container-fluid">
     <header class="row-fluid navbar-wrapper clearfix">
         <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
@@ -21,10 +21,8 @@
             <nav class="navbar">
                 <div class="navbar-inner">
                     <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="button" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="sprite-menu"></i>
                     </button>
                     <a class="brand" href="#"><img src="images/logo-01.png"></a>
 
@@ -51,17 +49,17 @@
             <div class="row-fluid">
                 <form class="form-search span12 text-center" action="search-results.html" method="get"> <!-- Search Form -->
                     <input class="" id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
-                    <button class="btn-custom"><i class="icon-search"></i></button>
+                    <button id="search" class="btn-custom"><i class="sprite-search"></i></button>
                 </form> <!-- Ends Search Form -->
             </div>
         </div>
 
         <div id="cta" class="row-fluid hidden-phone">
             <div class="span5 offset1">
-            <h2 class="">Discover new touring artists and start tracking your favorite ones.</h2>
-            <h4>Search by location.</h4><br />
-            <h4>Add concerts to your calendar.</h4><br />
-            <h4>Follow your favorite artists and keep track of their tour dates.</h4><br />
+            <h2>Discover new touring artists and start tracking your favorite ones</h2>
+            <h4><i class="sprite-location"></i> <span class="head-cta">Search by location.</span></h4><br />
+            <h4><i class="sprite-calendar"></i> <span class="head-cta">Add concerts to your calendar.</span></h4><br />
+            <h4><i class="sprite-follow"></i> <span class="head-cta">Follow your favorite artists and keep track of their tour dates.</span></h4><br />
             </div>
             <div class="span4 offset1">
                 <h3>Sign Up and start tracking your artists!</h3>
@@ -70,11 +68,11 @@
                 <input id="username-signup" name="username" type="text" placeholder="Username" maxlength="30"><br />
                 <input id="password-signup" name="password" type="password" placeholder="Password" maxlength="30"><br />
                 <input id="verify-signup" name="verify-password" type="password" placeholder="Verify Password" maxlength="30"><br />
-                <button id="sign-up" class="btn-custom" type="button">Sign Up</button>
+                <button id="sign-up-cta" class="btn-custom" type="button">Sign Up</button>
             </form>
             </div>
         </div>
-        <h2>New tour dates coming up your town!</h2>
+        <h2>Up coming dates!</h2>
 
         <div class="hidden-phone row-fluid"> <!-- Feature Section/ Hidden for mobile -->
             <div class="span4 feature">
@@ -169,21 +167,41 @@
 
     <!-- Modal -->
     <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h2 id="myModalLabel">Sign In</h2>
-        </div>
-        <div class="modal-body">
-            <form>
-                <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
-                <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
-                <label class="checkbox">
-                    <input type="checkbox"> Remember Me
-                </label>
-                <button class="btn-custom">Sign In</button>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="modal-header">
+                    <button type="button" class="close visible-phone" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2 class="myModalLabel">Sign In</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                        <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                        <!--<label class="checkbox">-->
+                            <input type="checkbox"> Remember Me <br />
+                        <!--</label>-->
+                        <button id="sign-in" class="btn-custom">Sign In</button>
+                    </form>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="modal-header">
+                    <button type="button" class="close visible-desktop" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2 class="myModalLabel">Sign Up</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input id="email-sign-up-modal" name="email" type="text" placeholder="E-mail" maxlength="30"><br />
+                        <input id="username-sign-up-modal" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                        <input id="password-sign-up-modal" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                        <input id="verify-sign-up-modal" name="verify-password" type="password" placeholder="Verify Password" maxlength="30"><br />
+                        <button id="sign-up" class="btn-custom" type="button">Sign Up</button>
+                    </form>
+                </div>
+            </div>
 
-            </form>
         </div>
+
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
         </div>

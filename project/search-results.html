@@ -21,16 +21,14 @@
         <nav class="navbar">
             <div class="navbar-inner">
                 <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <i class="sprite-menu"></i>
                 </button>
                 <a class="brand" href="index.html"><img src="images/logo-01.png"></a>
 
                 <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-                <div class="nav-collapse collapse pull-right">
-                    <ul id="nav-links" class="nav">
+                <div class="nav-collapse collapse text-center">
+                    <ul id="nav-links" class="nav pull-right">
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="#">Bands To Watch</a></li>
                         <!-- Button to trigger modal -->
@@ -214,26 +212,47 @@
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h2 id="myModalLabel">Sign In</h2>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="modal-header">
+                <button type="button" class="close visible-phone" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="myModalLabel">Sign In</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                    <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                    <!--<label class="checkbox">-->
+                    <input type="checkbox"> Remember Me <br />
+                    <!--</label>-->
+                    <button id="sign-in" class="btn-custom">Sign In</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-            <form>
-                <input id="username-signin" name="username" type="text" placeholder="Username" maxlength="30"><br />
-                <input id="password-signin" name="password" type="password" placeholder="Password" maxlength="30"><br />
-                <label class="checkbox">
-                    <input type="checkbox"> Remember Me
-                </label>
-            </form>
+        <div class="span6">
+            <div class="modal-header">
+                <button type="button" class="close visible-desktop" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="myModalLabel">Sign Up</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input id="email-sign-up-modal" name="email" type="text" placeholder="E-mail" maxlength="30"><br />
+                    <input id="username-sign-up-modal" name="username" type="text" placeholder="Username" maxlength="30"><br />
+                    <input id="password-sign-up-modal" name="password" type="password" placeholder="Password" maxlength="30"><br />
+                    <input id="verify-sign-up-modal" name="verify-password" type="password" placeholder="Verify Password" maxlength="30"><br />
+                    <button id="sign-up" class="btn-custom" type="button">Sign Up</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-            <button class="btn btn-inverse">Sign In</button>
-        </div>
+
     </div>
+
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+</div>
 </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
