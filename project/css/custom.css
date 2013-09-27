@@ -5,23 +5,18 @@
 
 body{
     background-color: #2F3440;
+    color: #2F3440;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 1.00em;
 }
+/****** Headings *******/
 
 h1{
     font-family: 'talldark', sans-serif;
     font-size: 7.143em;
     color: #FFFEF5;
     font-weight: normal;
-}
-
-h3{
-    font-family: 'source sans pro', sans-serif;
-    font-size: 1.429em;
-    font-weight: 300;
-    color: #FFFEF5;
 }
 
 h2{
@@ -31,6 +26,15 @@ h2{
     color: #3EE3A6;
     text-transform: uppercase;
 }
+
+h3{
+    font-family: 'source sans pro', sans-serif;
+    font-size: 1.429em;
+    font-weight: 300;
+    color: #FFFEF5;
+}
+
+/********** Nav Bar **********/
 
 .navbar-inner {
     min-height: 40px;
@@ -44,7 +48,6 @@ h2{
 }
 
 .navbar .nav>li>a, .caption-custom h3 {
-    float: none;
     padding: 10px 15px 10px;
     color: #F03E4F;
     text-decoration: none;
@@ -64,21 +67,24 @@ h2{
     background-color: transparent;
 }
 
+/********** Search Results *************/
+#search-results-page article{
+    background-color: #FFFEF5;
+}
 
-
-article ul{
+#search-results-page article ul{
     list-style-type: none;
     padding: 0;
     margin-left: 0;
 }
 
-article ul li{
+#search-results-page article ul li{
     border: 1px solid;
     margin-bottom: 2px;
     position: relative;
 }
 
-article ul li div{
+#search-results-page article ul li div{
     float: left;
     width: 50px;
     background: #808080;
@@ -87,16 +93,11 @@ article ul li div{
     margin-right: 10px;
 }
 
-.btn-custom{
-    background-color: #3EE3A6;
-    border: none;
-    width: 40px;
-    height: 30px;
-}
-
-article ul li div.even{
+#search-results-page article ul li div.even{
     background: #000;
 }
+
+
 
 article ul li div .month{
     border-bottom: 1px solid #fff;
@@ -123,12 +124,14 @@ article ul li div .month{
     margin-bottom: 0;
 }
 
-.carousel-control{
-    top:50%;
+/******** Detail Page ********/
+#detail-page article .row-fluid{
+    background-color: #FFFEF5;
+    margin-bottom: 20px;
 }
 
-#change-location, #date-picker{
-    /*margin-left: 10px;*/
+.carousel-control{
+    top:50%;
 }
 
 #my-calendar, #buy-tickets, #maps{
@@ -160,9 +163,7 @@ ul.thumbnails li:nth-child(3n+1){
     height: 360px;
 }
 
-#search-results-page article{
-    background-color: #FFFEF5;
-}
+/********** Footer **********/
 
 footer{
     background-color: #303030;
@@ -192,12 +193,76 @@ footer li a:hover{
     color: #FFFEF5;
 }
 
-#detail-page article .row-fluid{
-    background-color: #FFFEF5;
-    margin-bottom: 20px;
+/********* Buttons **********/
+.btn-custom{
+    background-color: #3EE3A6;
+    border: none;
+    width: 100%;
+    height: 30px;
 }
 
-/* Desktop */
+/********* Input Fields ********/
+.container-fluid input {
+    border-radius: 0;
+}
+
+/******** Sprite **********/
+[class^="sprite-"], [class*=" sprite-"] {
+    display: inline-block;
+    vertical-align: text-bottom;
+    line-height: 30px;
+    background-image: url("../img/icons-sprite-01.png");
+    background-repeat: no-repeat;
+}
+.sprite-search {
+    background-position: -3px -3px;
+    width: 30px;
+    height: 29px;
+}
+
+.sprite-location {
+    background: url('../img/icons-sprite-01.png') no-repeat -38px -3px;
+    width: 21px;
+    height: 30px;
+}
+
+.sprite-plus {
+    background: url('../img/icons-sprite-01.png') no-repeat -67px -4px;
+    width: 29px;
+    height: 29px;
+}
+
+.sprite-fb {
+    background: url('../img/icons-sprite-01.png') no-repeat -101px -4px;
+    width: 29px;
+    height: 29px;
+}
+
+.sprite-calendar {
+    background: url('../img/icons-sprite-01.png') no-repeat -4px -37px;
+    width: 30px;
+    height: 30px;
+}
+
+.sprite-follow {
+    background: url('../img/icons-sprite-01.png') no-repeat -39px -41px;
+    width: 30px;
+    height: 26px;
+}
+
+.sprite-tweet {
+    background: url('../img/icons-sprite-01.png') no-repeat -71px -38px;
+    width: 29px;
+    height: 29px;
+}
+
+.sprite-mail {
+    background: url('../img/icons-sprite-01.png') no-repeat -105px -42px;
+    width: 28px;
+    height: 22px;
+}
+
+/* Desktop Media Queries */
 @media (min-width: 768px) {
     #home-search{
         background: #101010 url("../images/home-page.jpg") no-repeat 50% 10%;
@@ -260,15 +325,6 @@ footer li a:hover{
 
     .caption-custom .venue{
         margin-left: 15px;
-    }
-
-    #my-calendar-desktop{
-        width: 15%;
-        margin-bottom: 20px;
-    }
-
-    #nav-links {
-        margin-left: 28%;
     }
 
     .navbar .nav>li>a{

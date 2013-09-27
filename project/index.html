@@ -7,7 +7,6 @@
     <meta name="Description" content="At The Venue allow music fans to look for gigs and tour dates of their favorite artists in their city or nearby.">
     <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" type="text/css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
     <link href="css/custom.css" type="text/css" rel="stylesheet">
@@ -31,12 +30,9 @@
 
                     <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                     <div class="nav-collapse collapse text-center">
-                        <ul id="nav-links" class="nav">
+                        <ul id="nav-links" class="nav pull-right">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Bands To Watch</a></li>
-
-                        </ul>
-                        <ul class="nav pull-right">
                             <!-- Button to trigger modal -->
                             <li><a href="#myModal" data-toggle="modal">Sign In | Sign Up</a></li>
                         </ul>
@@ -184,11 +180,12 @@
                 <label class="checkbox">
                     <input type="checkbox"> Remember Me
                 </label>
+                <button class="btn-custom">Sign In</button>
+
             </form>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-            <button class="btn btn-inverse">Sign In</button>
         </div>
     </div>
 </div>
