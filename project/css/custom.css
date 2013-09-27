@@ -109,6 +109,10 @@ h3{
     width: 96%;
 }
 
+#myModal{
+    position: absolute;
+}
+
 /********** Search Results *************/
 #search-results-page article{
     background-color: #FFFEF5;
