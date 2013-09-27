@@ -47,9 +47,10 @@
         </ul>
         <form id="search-results" class=" form-search span6 text-right" action="search-results.html" method="get"> <!-- Search Form -->
             <input id="search-input" name="search" type="text" placeholder="Search for an artist, venue or city..." maxlength="30">
-            <button class="btn-custom">Search</button>
-        </form> <!-- Ends Search Form --></div>
-
+            <button id="search" class="btn-custom"><i class="sprite-search"></i> </button>
+        </form> <!-- Ends Search Form -->
+    </div>
+    <!-- Advance search mobile -->
     <div class="row-fluid btn-toolbar row-fluid text-center visible-phone">
         <div class="btn-group">
             <button type="button" class="btn" data-toggle="collapse" data-target="#location"><i class="icon-map-marker"></i></button>
@@ -72,16 +73,17 @@
             <input id="change-location" class="" name="location" type="text" placeholder="Change location" maxlength="30">
         </div>
         <div id="calendar" class="collapse">
-            <input id="date-picker" name="date-picker" type="text" placeholder="mm/dd/yy"><br />
+            <input id="" class="date-picker" name="date-picker" type="text" placeholder="mm/dd/yy"><br />
         </div>
-    </div>
+    </div>    <!--Ends Advance search mobile -->
 
-        <article class="row-fluid">
-            <p class="">Search results for "sigur ros" near Orlando, Fl.</p>
-            <p class="">We found 68 <a href="#">venues</a> and 174 upcoming <a href="#">events</a>.</p>
+
+<article class="row-fluid">
             <div class="row-fluid">
                 <div class="span6">
-                    <h3 class="">In Your Area</h3>
+                    <p class="">Search results for "sigur ros" near Orlando, Fl.</p>
+                    <p class="">We found 68 <a href="#">venues</a> and 174 upcoming <a href="#">events</a>.</p>
+                    <h1 class="">In Your Area</h1>
                     <ul class="clickables">
                         <li>
                             <div>
@@ -92,6 +94,7 @@
                             <p class="location"> <span class="venue">CFE Arena -</span>
                             <span class="city">Orlando,</span>
                             <span class="state">Fl</span></p>
+                            <strong class="available">Available Tickets</strong>
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                         <li>
@@ -105,10 +108,12 @@
                             <p class="location"><span class="venue">USF Sun Dome -</span>
                             <span class="city">Tampa,</span>
                             <span class="state">Fl</span></p>
+                            <strong class="sold-out">Sold - Out</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                     </ul>
-                    <h3>Upcoming Events</h3>
+                    <h1>Upcoming Events</h1>
                     <ul class="clickables">
                         <li>
                             <div>
@@ -121,6 +126,8 @@
                             <p class="location"><span class="venue">Wembley Arena -</span>
                             <span class="city">London,</span>
                             <span class="state">UK</span></p>
+                            <strong class="available">Available Tickets</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                         <li>
@@ -134,6 +141,8 @@
                             <p class="location"><span class="venue">The O2 -</span>
                             <span class="city">Dublin,</span>
                             <span class="state">Ireland</span></p>
+                            <strong class="available">Available Tickets</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                         <li>
@@ -147,6 +156,8 @@
                             <p class="location"><span class="venue">Brighton Centre -</span>
                             <span class="city">Brighton,</span>
                             <span class="state">UK</span></p>
+                            <strong class="available">Available Tickets</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                         <li>
@@ -160,6 +171,8 @@
                             <p class="location"><span class="venue">Usher Hall -</span>
                             <span class="city">Edinburgh,</span>
                             <span class="state">UK</span></p>
+                            <strong class="available">Available Tickets</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                         <li>
@@ -173,17 +186,21 @@
                             <p class="location"><span class="venue">Oslo Spektrum -</span>
                             <span class="city">Oslo,</span>
                             <span class="state">Norway</span></p>
+                            <strong class="sold-out">Sold - Out</strong>
+
                             <i class="icon-chevron-right arrow"></i>
                         </li>
                     </ul>
                 </div>
-                <div class="span6 text-right hidden-phone">
+
+                <!-- Advance search desktop -->
+                <div class="span3 offset3 text-center hidden-phone">
                     <h3>Advance Search</h3>
                     <form>
                       <strong>Change Location:</strong><br />
-                      <input class="" name="location" type="text" placeholder="Enter location" maxlength="30"><br />
+                      <input id="location-refine" name="location" type="text" placeholder="Enter location" maxlength="30"><br />
                       <strong>Select Venue:</strong><br />
-                      <select>
+                      <select id="venue-refine">
                           <!-- dropdown menu links -->
                           <option value="">Venue</option>
                           <option value="hob">House Of Blues</option>
@@ -194,11 +211,10 @@
                           <option value="beacham">The Beacham</option>
                       </select><br />
                       <strong>Change Date:</strong><br />
-                      <input name="date-picker" type="text" placeholder="mm/dd/yy"><br />
-                      <button class="btn-custom">Search</button>
-
+                      <input id="date-refine" class="date-picker" name="date-picker" type="text" placeholder="mm/dd/yy"><br />
+                      <button id="search-refine" class="btn-custom">Search</button>
                   </form>
-                </div>
+                </div><!-- Ends Advance search mobile -->
             </div>
         </article>
 

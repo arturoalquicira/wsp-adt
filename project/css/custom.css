@@ -60,7 +60,7 @@ h3{
 }
 
 
-.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus, .navbar .nav>li>a:hover{
     color: #FFFEF5;
     text-decoration: none;
     box-shadow: none;
@@ -114,7 +114,15 @@ h3{
 }
 
 /********** Search Results *************/
-#search-results-page article{
+#search-results-page #search-input{
+    width: 73.5%;
+}
+
+#search-results-page #search{
+    width: 20%;
+}
+
+#search-results-page article .span6, #search-results-page article .span3{
     background-color: #FFFEF5;
 }
 
@@ -126,21 +134,28 @@ h3{
 
 #search-results-page article ul li{
     border: 1px solid;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     position: relative;
+    height: 80px;
+}
+
+#search-results-page article ul li:hover{
+    cursor: pointer;
 }
 
 #search-results-page article ul li div{
     float: left;
-    width: 50px;
-    background: #808080;
+    width: 80px;
+    height: 60px;
+    padding-top: 20px;
+    background: #303030;
     text-align: center;
-    color: #fff;
+    color: #FFFEF5;
     margin-right: 10px;
 }
 
 #search-results-page article ul li div.even{
-    background: #000;
+    background: #3f5666;
 }
 
 
@@ -157,19 +172,50 @@ article ul li div .month{
 
 .arrow{
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 33px;
+    right: 15px;
 }
 
 .location{
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 0;
 }
 
+.available{
+    color: #3EE3A6;
+}
+
+#search-results-page h1{
+    font-family: 'talldark', sans-serif;
+    font-size: 3.143em;
+    color: #2F3440;
+    font-weight: normal;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+#search-results-page h3{
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.725em;
+    font-weight: 700;
+    color: #3EE3A6;
+    text-transform: uppercase;
+}
+
+
 /******** Detail Page ********/
 #detail-page article .row-fluid{
-    background-color: #FFFEF5;
     margin-bottom: 20px;
+}
+
+#detail-page article .span6{
+    background-color: #FFFEF5;
+    padding: 10px;
+}
+
+.group{
+    background-color: #FFFEF5;
+
 }
 
 .carousel-control{
@@ -203,6 +249,33 @@ ul.thumbnails li:nth-child(3n+1){
 #frame-map-desktop{
     width: 100%;
     height: 360px;
+}
+
+#buy-tickets, #maps{
+    background-color: #2F3440;
+    background-image: none;
+    color: #ffffff;
+    position: relative;
+}
+
+#buy-tickets i, #maps i{
+    position: absolute;
+    right: 15px;
+}
+
+#detail-page #search-input{
+    width: 70%;
+}
+
+#detail-page #search{
+    width: 20%;
+}
+
+#detail-page h1 {
+    font-family: 'talldark', sans-serif;
+    font-size: 5.143em;
+    color: #FFFEF5;
+    font-weight: normal;
 }
 
 /********** Footer **********/
@@ -334,17 +407,16 @@ footer li a:hover{
 
     /******** Home Page ***********/
 
+    #sign-up, #sign-in{
+        width: 102.6%;
+    }
+
     #home #search{
         width: 5%;
     }
 
     #home #search-input{
         width: 20%;
-    }
-
-    #home #sign-up{
-        width: 83.5%;
-        height: 40px;
     }
 
 
@@ -419,15 +491,45 @@ footer li a:hover{
         margin-top: 50px;
     }
 
-    footer{
-        font-size: 1.125em;
+    /********** Search Results *************/
+    #search-results-page #search-input{
+        width: 34.5%;
     }
+
+    #search-results-page #search{
+        width: 10%;
+    }
+
+    #search-results-page #location-refine{
+        width: 90%;
+    }
+
+    #search-results-page #venue-refine{
+        width: 95%;
+    }
+
+    #search-results-page #date-refine{
+        width: 91%;
+    }
+
+    #search-results-page #search-refine{
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    #search-results-page .row-fluid .span6 p{
+        margin-left: 13px;
+    }
+
+    /*footer{*/
+        /*font-size: 1.125em;*/
+    /*}*/
 
     footer ul{
         list-style-type: none;
         padding: 0;
         margin: 0 auto;
-        width: 395px;
+        width: 355px;
         margin-top: 40px;
     }
 
@@ -454,5 +556,31 @@ footer li a:hover{
         font-weight: 300;
         color: #FFFEF5;
     }
+
+    #detail-page #search-input{
+        width: 35%;
+    }
+
+    #detail-page #search{
+        width: 10%;
+    }
+
+    .tickets{
+        width: 100%;
+    }
+
+    #detail-page h1{
+        font-family: 'talldark', sans-serif;
+        font-size: 5.143em;
+        color: #FFFEF5;
+        font-weight: normal;
+        width: 250px;
+    }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
 
 }
