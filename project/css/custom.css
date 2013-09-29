@@ -114,6 +114,10 @@ h3{
 }
 
 /********** Search Results *************/
+#search-results-page p{
+    padding: 5px;
+}
+
 #search-results-page #search-input{
     width: 73.5%;
 }
@@ -476,6 +480,7 @@ footer li a:hover{
         width: 100%;
         bottom: 0;
         color: #fff;
+        padding-bottom: 10px;
     }
 
     .caption-custom h3{
@@ -581,6 +586,15 @@ footer li a:hover{
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 810px){
+    #home h1{
+        font-size: 115px;
+    }
 
 
 }
