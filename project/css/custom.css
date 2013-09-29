@@ -208,6 +208,27 @@ article ul li div .month{
 
 
 /******** Detail Page ********/
+
+#detail-page #my-calendar-desktop i{
+    float: left;
+}
+
+#detail-page #my-calendar-desktop span{
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+button .social i{
+    float: left;
+}
+
+button .social span{
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 #detail-page article .row-fluid{
     margin-bottom: 20px;
 }
